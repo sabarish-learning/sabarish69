@@ -19,7 +19,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     currentUserSubscription: Subscription;
     users: User[] = [];
     event_list = [
-        {img:'../assets/images/slide1.jpg'},{img:'../assets/images/slide3.jpg'},{img:'../assets/images/slide2.jpg'}]
+        {img:'assets/images/slide1.jpg'},{img:'assets/images/slide3.jpg'},{img:'assets/images/slide2.jpg'}]
     constructor(
         private authenticationService: AuthenticationService,
         private userService: UserService,
