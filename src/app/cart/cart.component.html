@@ -1,0 +1,46 @@
+<br/>
+<br/>
+<div  class="container" >
+    <div id="myid" class="row">
+        <div  class="col-sm-6 offset-sm-3">
+            <h1>CART</h1>
+<table  class="table" *ngIf="cartItems && cartItems.length > 0;else emptyCheckout">
+    <thead>
+      <tr>
+        <th scope="col">Image</th>
+        <th scope="col">Product</th>
+        <th scope="col">Price</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Total</th>
+        <th scope="col">Remove</th>
+        
+      </tr>
+    </thead>
+    <tbody  *ngFor="let item of cartItems;let i=index;">
+      <tr>
+        <td><img class="card-img-top"  style="height:100px;width:100px;"    [src]="item.image"></td>
+        <td>{{item.name}}</td>
+        <td>{{item.price}}</td>
+        <td><input type="number" name="qty" [(ngModel)]="item.qty"  min="1"/></td>
+        <td>{{(item.qty * item.price) | currency:'INR'}}</td>
+      <td> <button type="button"  class="close" aria-label="Remove Item" (click)="removeItemFromCart(item.id)">  <span aria-hidden="true">&times;</span>
+        </button></td>
+         </tr>
+         <button class="btn btn-danger"  [disabled]="item.qty==1"  (click)="updatecart(i)">UPDATE CART</button>
+     </tbody>
+     <strong class="d-block">Total:{{ grandtotal | currency:'INR'}}</strong>
+   
+     <button class="btn btn-primary float-right" routerLink="/billing" >CHECKOUT</button>
+  </table>
+  <ng-template #emptyCheckout> 
+    <div class="card alert alert-primary">
+     <div class="card-body">
+       Please shop some products & Provide billing information .<a class="btn btn-sm btn-info float-right ml-2" routerLink = '/'> Continue Shopping</a> 
+     </div>
+    </div>
+      </ng-template>
+        </div>
+    </div>
+</div>
+<br/>
+<br/>

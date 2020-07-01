@@ -1,0 +1,52 @@
+{
+    "products": [
+      {
+        "id": "001",
+        "qty":1,
+        "name": "Brake1",
+        "price":19.99,
+        "image": "../assets/images/product-11-1.jpg",
+        "description": "Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum."
+      },
+      {
+        "id": "002",
+        "qty":1,
+        "name": "Brake2",
+        "price":19.99,
+        "image": "../assets/images/product-2-1.jpg",
+        "description": "Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum."
+      },
+      {
+        "id": "003",
+        "qty":1,
+        "name": "Brake3",
+        "price":19.99,
+        "image": "../assets/images/product-3-1.jpg",
+        "description": "Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum."
+      },
+      {
+        "id": "004",
+        "qty":1,
+        "name": "Brake4",
+        "price":19.99,
+        "image": "../assets/images/product-4-1.jpg",
+        "description": "Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum."
+      },
+      {
+        "id": "005",
+        "qty":1,
+        "name": "Brake5",
+        "price":19.99,
+        "image": "../assets/images/product-5-1.jpg",
+        "description": "Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum."
+      },
+      {
+        "id": "006",
+        "qty":1,
+        "name": "Brake6",
+        "price":19.99,
+        "image": "../assets/images/product-6-1.jpg",
+        "description": "Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum."
+      }
+    ]
+  }

@@ -1,0 +1,64 @@
+<!--component html goes here -->
+
+<div class="container m-4">
+    <div class="row">
+      <div class="col-md-8 order-md-1">
+        <div class="card">
+          <h5 class="card-header bg-info bg-light">Billing Information</h5>
+          <div class="card-body">
+  <form (ngSubmit)="onSubmit()" #myform="ngForm">
+  <div class="form-row">
+  <div class="form-group col-md-6">
+First Name:<br/>
+<input type="text"  class="form-control"  name="firstname" #firstname="ngModel" [(ngModel)]="model.firstname"  placeholder="enter the firstname" required/><br/>
+  </div>
+  <div class="form-group col-md-6">
+Last Name:<br/>
+<input type="text" name="lastname"  class="form-control" #lastname="ngModel"  [(ngModel)]="model.lastname"  placeholder="enter the lastname"  required/><br/>
+  </div>
+  <div class="form-group col-md-6">
+Email:<br/>
+<input type="email" name="email"  class="form-control" #email="ngModel"  [(ngModel)]="model.email"placeholder="enter the email" required/><br/>
+  </div>
+  <div class="form-group col-md-6">
+Mobile:<br/>
+<input type="text" name="mobile"  class="form-control"  #mobile="ngModel"  [(ngModel)]="model.mobile"placeholder="enter the mobile" required/><br/>
+  </div>
+  <div class="form-group col-md-6">
+Address 1:<br/>
+<input type="text" name="address1"  class="form-control"  #address1="ngModel"  [(ngModel)]="model.address1" placeholder="enter the address"  required/><br/>
+  </div>
+  <div class="form-group col-md-6">
+Address 2:<br/>
+<input type="text" name="address2"  class="form-control" #address2="ngModel"  class="form-control"  [(ngModel)]="model.address2" placeholder="enter the address" required /><br/>
+</div>
+<div class="form-group col-md-6">
+City:<br/>
+<input type="text" name="city"  class="form-control"  #city="ngModel"  [(ngModel)]="model.city" placeholder="enter the city" required/><br/>
+</div>
+<div class="form-group col-md-6">
+State:<br/>
+<select name="state"   id="aantal1"  [(ngModel)]="model.state" class="form-control" required>
+    <option *ngFor="let option1 of state" [value]="option1" >{{option1}}</option>
+</select><br/>
+</div>
+<div class="form-group col-md-6">
+  Payment Mode:<br/>
+  <select name="payment"   id="aantal2" [(ngModel)]="model.payment" class="form-control"required >
+      <option *ngFor="let option2 of payment" [value]="option2" >{{option2}}</option>
+  </select><br/>
+    </div>
+<div class="form-group col-md-6">
+Zip Code:<br/>
+<input type="text" name="zipcode" #zipcode="ngModel"  class="form-control"  [(ngModel)]="model.zipcode"  placeholder="enter the zipcode" required/><br/>
+</div>
+  </div>
+<button type = "submit" class="btn btn-success"  [disabled]="!myform.form.valid">Confirm and Place Order</button>
+<button class="btn btn-primary float-right" routerLink="/">Continue Shopping</button>
+</form>
+</div>
+</div>
+</div>      
+</div>
+</div>
+   
