@@ -11,10 +11,20 @@
     }
     @media print {
       #brandname, #brandname * {
+        display: none;
         visibility: hidden;
+        width: 10%;
+        height: 6%;
+        left: 0;
+        top: 0;
       }
       #sticky-footer, #sticky-footer * {
         visibility: hidden;
+        display: none;
+        width: 10%;
+        height: 6%;
+        left: 0;
+        top: 0;
       }
       #printme, #printme * {
         visibility: visible;
@@ -22,9 +32,9 @@
       #printme {
         position: absolute;
         width: 100%;
-        height: 60%;
         left: 0;
         top: 0;
       }
+     
     }
     

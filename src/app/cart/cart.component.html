@@ -1,10 +1,11 @@
-<br/>
-<br/>
-<div  class="container" >
-    <div id="myid" class="row">
-        <div  class="col-sm-6 offset-sm-3">
-            <h1>CART</h1>
-<table  class="table" *ngIf="cartItems && cartItems.length > 0;else emptyCheckout">
+<div class="container m-4">
+  <div class="row">
+    <div class="col-md order-md">
+      <div class="card">
+        <h5 class="card-header bg-info bg-light">CART</h5>
+        <div class="card-body">
+          <div class="table-responsive-md">
+<table  class="table table-striped" *ngIf="cartItems && cartItems.length > 0;else emptyCheckout">
     <thead>
       <tr>
         <th scope="col">Image</th>
@@ -12,26 +13,23 @@
         <th scope="col">Price</th>
         <th scope="col">Quantity</th>
         <th scope="col">Total</th>
-        <th scope="col">Remove</th>
-        
+        <th scope="col">Remove</th>  
       </tr>
     </thead>
-    <tbody  *ngFor="let item of cartItems;let i=index;">
-      <tr>
+    <tbody>
+      <tr *ngFor="let item of cartItems;let i=index;">
         <td><img class="card-img-top"  style="height:100px;width:100px;"    [src]="item.image"></td>
         <td>{{item.name}}</td>
         <td>{{item.price}}</td>
         <td><input type="number" name="qty" [(ngModel)]="item.qty"  min="1"/></td>
         <td>{{(item.qty * item.price) | currency:'INR'}}</td>
-      <td> <button type="button"  class="close" aria-label="Remove Item" (click)="removeItemFromCart(item.id)">  <span aria-hidden="true">&times;</span>
-        </button></td>
-         </tr>
-         <button class="btn btn-danger"  [disabled]="item.qty==1"  (click)="updatecart(i)">UPDATE CART</button>
+      <td><button type="button"  class="close" aria-label="Remove Item" (click)="removeItemFromCart(item.id)">  <span aria-hidden="true">&times;</span></button></td>
+         </tr>   
      </tbody>
-     <strong class="d-block">Total:{{ grandtotal | currency:'INR'}}</strong>
-   
-     <button class="btn btn-primary float-right" routerLink="/billing" >CHECKOUT</button>
+    
+     <button class="btn btn-primary" (click)="updatecart()" routerLink="/billing" >Checkout</button>
   </table>
+</div>
   <ng-template #emptyCheckout> 
     <div class="card alert alert-primary">
      <div class="card-body">
@@ -40,7 +38,7 @@
     </div>
       </ng-template>
         </div>
-    </div>
 </div>
-<br/>
-<br/>
+</div>
+</div>
+</div>

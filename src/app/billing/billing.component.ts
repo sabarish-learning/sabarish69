@@ -13,15 +13,22 @@ import { Router } from '@angular/router';
     styleUrls: ['billing.component.css']
 })
 export class BillingComponent {
-   
+    cartItems;
+  product: any;
+  grandtotal;
      state = ["select","Tamil nadu", "Kerala", "Andhra pradesh","Karnataka"];
      payment= ["select","COD", "UPI"];
      model= new billing("","","","","","","",this.state[0],"",this.payment[0]);
      //details = new companyInfo('Auto Connect','715 Fake Street','Chennai','600034','autoconnect@connect.net', '+9243567-8679');
      constructor(
-        private router: Router,)
+        private router: Router,
+        private myMainService: MyMainService,
+      private mySharedService: MySharedService,
+      )
       {}
-
+      ngOnInit(){
+      this.cartItems=JSON.parse(localStorage.getItem('cartItems'));
+      this.grandtotal = this.mySharedService.getTotalPrice();}
      onSubmit() { 
        console.log(this.model);
         localStorage.setItem('billing',JSON.stringify(this.model));

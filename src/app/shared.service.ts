@@ -4,13 +4,16 @@ import { Subject } from 'rxjs/Subject';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import { timer} from 'rxjs';
 
+
 @Injectable()
 export class MySharedService {
-  // Local variable which stores 
+  // Local variable which stores
+ 
+  
   public cartItems = [];
   public products = new Subject();
   rxjsTimer = timer(1000, 1000);
-
+  
   getProducts(): Observable<any> {
     console.log('this.cartItems :', this.cartItems);
     return this.products.asObservable();
@@ -45,19 +48,18 @@ export class MySharedService {
     this.products.next(this.cartItems);
   }
 
+ 
   // Calculate total price on item added to the cart
   getTotalPrice() {
-    let total = 0;
+   
     this.cartItems=JSON.parse(localStorage.getItem('cartItems'));
     this.cartItems.map(item => {
-     
+      let total = 0;
       total += (item.price*item.qty);
-      
-    })
-  return total
+      return total;
+    });
     }
-    refresh(){
-    setInterval(()=>{
-      this.getTotalPrice();},1000);}
+    
+    
    
 }

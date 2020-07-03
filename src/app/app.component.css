@@ -17,7 +17,7 @@
     
     #myInput {
       box-sizing: border-box;
-      width: 400px;
+      width: 300px;
       background-position: 14px 12px;
       background-repeat: no-repeat;
       font-size: 16px;
@@ -27,7 +27,8 @@
      
     }
     
-    #myInput:focus {outline: 3px solid #ddd;}
+    #myInput:focus {outline: 3px solid #ddd;
+    }
     
     .dropdown {
       position: relative;
@@ -56,15 +57,15 @@
     
     .dropdown a:hover {background-color: #ddd;}
     
-    #myDropdown  {display: block;width: 400px;}
+    #myDropdown  {display: block;width: 200px;}
 
-    #dropdownBasic4 {  margin-right: 100px; }
+    /* #dropdownBasic4 {   }
 
-    #dropdownBasic3 {  margin-right: 500px; }
+    #dropdownBasic3 {  }*/
 
-    #dropdownBasic2 {  margin-right: 100px; }
+    #dropdownBasic2 { float:right;  }
 
-    #dropdownBasic1 {  margin-right: 50px; }
+    #dropdownBasic1 { float:right;  } 
 
       /* CSS Document */
 
@@ -139,7 +140,7 @@
    
   }
   #navbrand{
-    margin-left: 50px;
+    float: left;
   }
   /* #slide1{
     float: left;
@@ -150,4 +151,30 @@
   /* .show12{
     display: none;
   } */
-  
+  @media print {
+    #brandname, #brandname * {
+      display: none;
+      visibility: hidden;
+      width: 10%;
+      height: 6%;
+      left: 0;
+      top: 0;
+    }
+    #sticky-footer, #sticky-footer * {
+      visibility: hidden;
+      display: none;
+      width: 10%;
+      height: 6%;
+      left: 0;
+      top: 0;
+    }
+    #printme, #printme * {
+      visibility: visible;
+    }
+    #printme {
+      position: absolute;
+      width: 100%;
+      left: 0;
+      top: 0;
+    }
+  }

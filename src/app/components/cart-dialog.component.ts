@@ -6,26 +6,23 @@ import { MySharedService } from '../shared.service';
   template: `
 
     <div  *ngIf="cartItems && cartItems.length > 0;else emptyCheckout ">
-    <div class="container">
-        <ul>
-        <li *ngFor="let item of cartItems">
+     
+        <div *ngFor="let item of cartItems">
           <img class="card-img-top" src="{{item.image}}" alt="Card image cap">
           <h3>{{item.name}}</h3> 
+          <span>{{item.price  | currency:'INR'}}</span>  
           <button type="button"  class="close text-right" aria-label="Remove Item" (click)="removeItemFromCart(item.id)">
           <span aria-hidden="true">&times;</span>
-        </button>    
-          <span>{{item.price  | currency:'INR'}}</span>    
-        </li>
-      </ul>
-      <div class="dropdown-divider"></div>
+        </button>
+        <div class="dropdown-divider"></div>      
+        </div>
       <div class="cart-total">
        <p class="text-right">     
         <strong class="d-block">Total:{{ grandtotal | currency:'INR'}}</strong>
         </p>
        </div>
-       <p><button type="button" class="btn btn-outline-primary btn-sm" (click)="emptyCart()">Empty Cart</button></p>
-       <button routerLink="/cart" class="btn btn-outline-primary btn-sm">CART</button>
-       </div>
+       <button routerLink="/cart" class="btn btn-outline-primary btn-sm float-left">CART</button>
+       <button type="button" class="btn btn-outline-danger btn-sm float-right" (click)="emptyCart()"> <i class="fa fa-trash-o" aria-hidden="true"></i></button>
        </div>
        <ng-template #emptyCheckout> 
     <p>Shopping cart is empty</p>
