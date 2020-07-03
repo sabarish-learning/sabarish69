@@ -32,8 +32,6 @@ export class BillingComponent {
      onSubmit() { 
        console.log(this.model);
         localStorage.setItem('billing',JSON.stringify(this.model));
-      
-    
         this.router.navigateByUrl('/billing', { skipLocationChange: true }).then(() => {
             this.router.navigate(['/checkout']);
         }); 

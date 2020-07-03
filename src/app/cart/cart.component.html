@@ -26,8 +26,9 @@
       <td><button type="button"  class="close" aria-label="Remove Item" (click)="removeItemFromCart(item.id)">  <span aria-hidden="true">&times;</span></button></td>
          </tr>   
      </tbody>
-    
-     <button class="btn btn-primary" (click)="updatecart()" routerLink="/billing" >Checkout</button>
+     <strong class="d-block">Total:{{ grandtotal | currency:'INR'}}</strong>
+     <button class="btn btn-danger" (click)="updatecart()">UpdateCart</button>
+     <button class="btn btn-primary" routerLink="/billing" >Checkout</button>
   </table>
 </div>
   <ng-template #emptyCheckout> 
