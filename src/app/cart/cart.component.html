@@ -28,7 +28,7 @@
      </tbody>
      <strong class="d-block">Total:{{ grandtotal | currency:'INR'}}</strong>
      <button class="btn btn-danger" (click)="updatecart()">UpdateCart</button>
-     <button class="btn btn-primary" routerLink="/billing" >Checkout</button>
+     <button class="btn btn-primary" routerLink="/billing" (click)="updatecart()">Checkout</button>
   </table>
 </div>
   <ng-template #emptyCheckout> 

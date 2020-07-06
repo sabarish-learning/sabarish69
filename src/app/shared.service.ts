@@ -51,12 +51,12 @@ export class MySharedService {
  
   // Calculate total price on item added to the cart
   getTotalPrice() {
+    let total = 0;
     this.cartItems=JSON.parse(localStorage.getItem('cartItems'));
     this.cartItems.map(item => {
-      let total = 0;
       total += (item.price*item.qty);
-      return total;
     });
+    return total;
     }
     
     

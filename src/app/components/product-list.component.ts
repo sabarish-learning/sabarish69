@@ -22,7 +22,7 @@ import { MySharedService } from '../shared.service';
                <p class="price">{{product.price}}</p>
                <p>{{product.description}}</p>
                <div class="text-center">
-                  <button type="button" class="btn btn-sm" [ngClass]="this.isAdded[i] ? 'btn-success' : 'btn-outline-secondary'" (click)="addToCart($event, product.id)">Add To Cart</button>
+                  <button type="button" class="btn btn-danger btn-sm" [ngClass]="this.isAdded[i] ? 'btn-success' : 'btn-outline-secondary'" (click)="addToCart($event, product.id)"><i class="fa fa-cart-plus fa-2x" aria-hidden="true"></i></button>
                 </div>
              </div>
            </div>
@@ -35,7 +35,7 @@ import { MySharedService } from '../shared.service';
              <p class="price">{{product.price}}</p>
              <p>{{product.description}}</p>
              <div class="text-center">
-                <button type="button" class="btn btn-sm" [ngClass]="this.isAdded[i] ? 'btn-success' : 'btn-outline-secondary'" (click)="addToCart($event, product.id)">Add To Cart</button>
+                <button type="button" class="btn btn-danger btn-sm" [ngClass]="this.isAdded[i] ? 'btn-success' : 'btn-outline-secondary'" (click)="addToCart($event, product.id)"><i class="fa fa-cart-plus fa-2x" aria-hidden="true"></i></button>
               </div>
              </div>
            </div>
@@ -60,7 +60,7 @@ import { MySharedService } from '../shared.service';
                <p class="price">{{product.price}}</p>
                <p>{{product.description}}</p>
                <div class="text-center">
-                  <button type="button" class="btn btn-sm" [ngClass]="this.isAdded[i] ? 'btn-success' : 'btn-outline-secondary'" (click)="addToCart($event, product.id)">Add To Cart</button>
+                  <button type="button" class="btn btn-danger btn-sm" [ngClass]="this.isAdded[i] ? 'btn-success' : 'btn-outline-secondary'" (click)="addToCart($event, product.id)"><i class="fa fa-cart-plus fa-2x" aria-hidden="true"></i></button>
                 </div>
              </div>
            </div>
@@ -73,7 +73,7 @@ import { MySharedService } from '../shared.service';
              <p class="price">{{product.price}}</p>
              <p>{{product.description}}</p>
              <div class="text-center">
-                <button type="button" class="btn btn-sm"  (click)="addToCart($event, product.id)">Add To Cart</button>
+                <button type="button" class="btn btn-danger btn-sm"  (click)="addToCart($event, product.id)"><i class="fa fa-cart-plus fa-2x" aria-hidden="true"></i></button>
               </div>
              </div>
            </div>

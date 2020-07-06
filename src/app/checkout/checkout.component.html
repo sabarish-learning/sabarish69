@@ -1,10 +1,14 @@
 <!--component html goes here -->
-<h1>CHECKOUT</h1>
-
+<div class="container m-4">
+    <div class="row">
+      <div class="col-md order-md">
+         <div class="card">
+  <h5 class="card-header bg-info bg-light">Checkout</h5>
+  <div class="card-body">
 <div *ngIf="cartItems && cartItems.length > 0;else emptyCheckout "> 
-  <div class="alert alert-success d-print-none" role="alert">
+  <div class="alert alert-primary d-print-none" role="alert">
    Thank you so much <strong>{{customerDetails.firstname}} {{customerDetails.lastname}}</strong>.Your order has been placed successfully and will be delivered in <strong>3 days.</strong> 
-   <button class="btn btn-sm btn-info ml-2 mr-1" (click)="print()">Print Invoice</button><button class="btn btn-sm btn-info ml-1" (click)="clearCart()">Place a New Order</button>
+   <button class="btn btn-sm btn-success ml-2 mr-1" (click)="print()">Print Invoice</button><button class="btn btn-sm btn-primary ml-1" (click)="clearCart()">Place a New Order</button>
    
   </div>
   
@@ -110,3 +114,8 @@
  </div>
 </div>
   </ng-template>
+  </div>
+  </div>
+      </div>
+    </div>
+</div>
